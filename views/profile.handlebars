@@ -1,0 +1,70 @@
+<div class='row'>
+	<div class='col-auto profile-title'>
+		<img class="profile-image-nav" src="{{getProfileImage profileImage}}" alt="">
+		<h2>Welcome, {{name}}!</h2>
+	</div>
+</div>
+<article class="profile-page">
+<div class="profile_container">
+	<a href="/profile/{{userId}}"><button class="btn btn-primary">View Profile</button></a>
+	<h3>Add a new profile picture</h3>
+	<form action="#" id="profile-form">
+		<input type="file" name="profile-picture" id="profile-picture">
+		<button type='submit' class='btn btn-primary'>Submit</button>
+	</form>
+	<div id="profile-preview"></div>
+	<h3>Add Your Github Username</h3>
+	<form action="#" id="github-link-form">
+		<input type="text" name="github-profile-link" id="github-profile-link" placeholder="Username">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+	
+
+	<div class="socials-container">
+	<h3 class="social-title">Socials</h3>
+	{{#if socials}}
+	{{#each socials as |social|}}
+	{{> socialCard}}
+	{{/each}}
+	{{/if}}
+	<!-- Creat new social links-->
+		<div id="add-socials">
+		
+			<button class="btn social-btn social-add">+</button>
+		</div>
+	</div>
+
+</div>
+
+<aside class="profile-projects">
+	<h2>Projects:</h2>
+	<button class="btn social-btn project-add" onclick='href=window.location.replace("create")'>Create Projects</button>
+	{{#if projects.length}}
+	<div class='project-list'>
+		<h3>Current Projects:</h3>
+			{{#each projects as |project|}}
+				<div class='delete-project-con'>
+					<div class='profile-project-name'>
+						<h4><a
+								href='/project/{{project.id}}'
+							>{{project.project_name}}</a></h4>
+					</div>
+					<div class=''>
+						<button
+							class='btn btn-sm btn-danger'
+							data-id='{{project.id}}'
+						>DELETE</button>
+						<button
+						onclick="window.location.replace('/edit/{{project.id}}')"
+							class='btn btn-sm btn-edit'
+						>Edit</button>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	{{/if}}
+</div>
+</aside>
+</article>
+
+<script src='./js/profile.js'></script>

@@ -1,0 +1,44 @@
+<article id="{{project.id}}" class="project-page">
+	{{! SOCIAL MEDIA TAGS }}
+	{{! TITLE OF PROJECT }}
+	<br />
+	<h2>{{project.project_name}}</h2>
+	{{> reaction_buttons reactions=project.reactions id=project.id loggedInUser=userId}}
+	<br />
+	{{> project_user user=project.user}}
+	<br />
+
+	{{! LINK TO THE PROJECT }}
+	<div class='project-links'>
+		{{#if project.repo_link}}
+		<a class='' href='{{project.repo_link}}'><img
+				class='social-img-con'
+				src='/images/github.png'
+				alt=''
+			/></a>
+		{{/if}}
+		{{#if project.deployed_link}}
+		<a href='{{project.deployed_link}}'><img class="social-external-img" src="/images/external.png" alt="" srcset=""></a>
+		{{/if}}
+	</div>
+
+	 {{#if project.project_images}}
+	<div class="slide-btn-container">
+	 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+ 
+	<div class='slideshow-container'>
+		{{#each project.project_images as |image|}}
+		{{> project_imageSlide}}
+		{{/each}}
+	</div>
+	{{/if}}
+	 <!-- Next and previous buttons -->
+ 
+
+	{{! PROJECT DESCRIPTION }}
+
+	<p class="project_desc">{{project.description}}</p>
+</article>
+<script src='../js/project.js'></script>

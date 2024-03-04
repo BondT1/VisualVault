@@ -1,0 +1,58 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Visual Vault / Communitree </title>
+    <link rel='stylesheet' href='/css/jass.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+
+  <body class="wrapper">
+      <header>
+        <img class="logo" src="/images/Logop2.png" alt="Visual Vault Logo" />
+			  <nav class="navigation">
+          <div class="search-bar">
+          <form action="/search" method="GET">
+          <input type="text" name="search" placeholder="Search for a user or project">
+          <button type="submit">Search</button>
+          </form>
+          </div>
+        <button onclick="window.location.href='/'">Home</button>
+        <button onclick="window.location.href='/recent'">Recent Projects</button>
+        {{#unless logged_in}}
+				<button onclick="window.location.href='/login'">
+					Login
+				</button>
+        {{else}}
+        <button id="logout">Log Out</button>
+        {{#if profileImage}}
+           <a class="profile_link" href="/profile"><img  class="profile-image-nav" src="{{getProfileImage profileImage}}" alt="" srcset=""></a>
+        {{else}}
+           <a class="profile_link profile-border" href="/profile"><img  class="profile-image-nav" src="../images/userIcon.png" alt="" srcset=""></a>
+        {{/if}}
+       
+        {{/unless}}
+			</nav>
+		</header>
+      <main class="content">
+        <!-- Render the sub layout -->
+        {{{body}}}
+      </main>
+      <footer>
+      <a class='footer-container' href="https://github.com/AMillsy/Matrix-project"><img
+				class='footer-icon'
+				src='/images/github.png'
+				alt='Github link'
+			/></a>
+      </footer>
+    </div>
+    
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+      <script src='../js/reactions_interactivity.js'></script>
+    {{/if}}
+  </body>
+
+</html>

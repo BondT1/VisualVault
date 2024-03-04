@@ -1,0 +1,641 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
+
+header,
+.project:not(:last-child) {
+	border-bottom: 1px solid #ccc;
+}
+
+.feature_projects {
+	border-top: 5px black solid;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+
+.feature_text {
+	padding: 10px;
+	text-align: center;
+	color: #3d0d6f;
+}
+
+.project {
+	position: relative;
+	min-height: 100px;
+	margin: 5px;
+	color: white;
+	background-image: url('/images/project\ card\ background.jpg');
+	background-size: cover;
+	transition: opacity 0.3s ease;
+}
+
+.project_desc {
+	white-space: pre-wrap;
+	padding: 30px;
+}
+.project:hover {
+	opacity: 1;
+}
+
+.project-name {
+	margin-left: 18px;
+	margin-top: 1%;
+	color: white;
+	font-family: Geneva, Verdana, sans-serif;
+}
+
+.project-name h3 {
+	color: white;
+}
+
+.project-list {
+	color: #3d0d6f;
+}
+
+.project-caption {
+	color: white;
+	font-family: Geneva, Verdana, sans-serif;
+}
+
+.date {
+	color: white;
+	font-family: Geneva, Verdana, sans-serif;
+}
+
+.project-page {
+	position: relative;
+	min-height: 100%;
+	margin: 5px;
+	color: white;
+	background-image: url('../images/project-page-background.jpg');
+	background-size: cover;
+}
+
+.project-page h2 {
+	margin-left: 1.5%;
+}
+
+.project-user {
+	margin-left: 3%;
+}
+
+.user-id {
+	color: white;
+	font-size: 18px;
+	margin-left: 25px;
+}
+
+.no-button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	color: #1b89bc;
+	text-decoration: none;
+	font-size: 100%;
+}
+
+.no-button:hover {
+	color: #065b83;
+	text-decoration: underline;
+}
+
+.dollar-amount {
+	color: #056605;
+	font-weight: bold;
+	margin-left: -5px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	max-width: 275px;
+	max-height: 180px;
+	margin: -10px;
+}
+
+header {
+	background-color: white;
+	min-height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	text-align: center;
+}
+
+nav {
+	margin: 30px;
+	width: 100%;
+}
+
+.navigation button {
+	position: relative;
+	margin-left: 10px;
+	background-color: #ffffff;
+	color: #3d0d6f;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.navigation button:hover {
+	background-color: #3d0d6f;
+	color: white;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+footer {
+	background-color: #fff;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid #ccc;
+}
+
+.footer-icon {
+	object-fit: contain;
+	width: 70px;
+	justify-content: center;
+}
+
+.signup-form {
+	max-width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.signup-form button {
+	background-color: white;
+	color: #3d0d6f;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 12px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.signup-form button:hover {
+	background-color: #3d0d6f;
+	color: white;
+}
+
+.introduction {
+	background-image: url('/images/coding\ background.jpg');
+	background-size: cover;
+	padding-top: 10px;
+	display: flex;
+	justify-content: left;
+	flex-direction: column;
+	align-items: left;
+	width: 100%;
+	min-height: 560px;
+}
+
+.profile-border {
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.project-links {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.social_container {
+	margin: 5px;
+	display: flex;
+	width: 60px;
+	height: 60px;
+	margin-left: 4%;
+}
+
+.socials {
+	object-fit: contain;
+}
+
+.search-bar {
+	display: flex;
+	align-items: center;
+}
+
+.search-bar input[type='text'] {
+	flex-grow: 1;
+	font-size: 18px;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	width: 40%;
+	color: #3d0d6f;
+	border: 2px solid #3d0d6f;
+}
+
+.search-bar button {
+	font-size: 17px;
+	padding: 10px 20px;
+	background-color: #3d0d6f;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.search-bar button:hover {
+	background-color: #872c97;
+}
+
+#search-user {
+	color: #3d0d6f;
+}
+
+#search-project {
+	color: #3d0d6f;
+}
+
+.login {
+	color: #3d0d6f;
+}
+
+.signup {
+	color: #3d0d6f;
+	justify-content: center;
+	margin-right: 12px;
+}
+
+.login-form {
+	margin-left: 20px;
+}
+
+.form-input {
+	color: #3d0d6f;
+}
+
+input {
+	color: #3d0d6f;
+}
+
+label {
+	color: #3d0d6f;
+	font-weight: 400;
+}
+
+/*Test styles*/
+
+/* Slideshow container */
+.slideshow-container {
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.slide_image {
+	object-fit: contain;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	user-select: none;
+	color: black;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+.slide-btn-container {
+	margin: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.preview-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+.preview-image-force {
+	display: flex;
+	max-width: 200px;
+	max-height: 200px;
+	height: auto;
+	width: auto;
+}
+.preview-image {
+	object-fit: cover;
+	max-width: 200px;
+	max-height: 200px;
+	width: 200px;
+	height: 200px;
+}
+.preview-profile {
+	border-radius: 50%;
+}
+
+.reaction-buttons {
+	display: flex;
+	margin: 20px;
+	justify-content: space-between;
+	margin-right: 85%;
+	color: white;
+	margin-left: 2%;
+}
+
+.active-reaction {
+	background-color: #3d0d6f;
+	color: white;
+}
+
+.user-card {
+	background-color: black;
+}
+
+.user-card h3 {
+	margin-left: 20px;
+}
+
+p {
+	display: flex;
+	justify-content: left;
+	margin: 20px;
+}
+
+h2 {
+	display: flex;
+	justify-content: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.profile-title {
+	margin: 20px;
+	margin-top: 0%;
+	display: flex;
+	padding: 10px;
+	background-color: #553974;
+	color: white;
+
+	border-bottom: 2px solid black;
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+		rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.profile_container {
+	margin: 20px;
+}
+
+.profile_container button {
+	margin-bottom: 20px;
+}
+.profile_link {
+	margin: 20px;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+.profile-image-nav {
+	object-fit: cover;
+	max-width: 90px;
+	max-height: 90px;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+
+.socials-container {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.socials-container h4 {
+	color: #3d0d6f;
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+
+.socials-container p {
+	color: #3d0d6f;
+}
+
+.social-title {
+	color: #3d0d6f;
+	margin-top: 10px;
+}
+.social-img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	z-index: -1;
+}
+.social-img-con {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+
+	z-index: 100;
+}
+.social-external-img {
+	display: flex;
+	width: 50px;
+	height: 50px;
+}
+.social-create-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 25%;
+	padding: 10px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.social-link-input {
+	width: 150px;
+	margin-top: 10px;
+}
+.social-btn {
+	margin-top: 10px;
+	width: 40px;
+	height: 40px;
+	background-color: #3d0d6f;
+	color: white;
+	text-align: center;
+}
+
+.social-btn:hover {
+	background-color: #872c97;
+}
+.social-add {
+	margin-top: 20px;
+	font-weight: bolder;
+	font-size: 200%;
+}
+.social-create {
+	width: 60px;
+	height: 30px;
+	font-size: 125%;
+}
+#socials {
+	width: 100px;
+}
+.profile-page {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 2%;
+	margin-right: 10%;
+	color: #3d0d6f;
+}
+.project-add {
+	width: 300px;
+	margin: 20px;
+}
+
+.profile-projects {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.delete-project-con {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile-project-name {
+	padding-right: 20px;
+}
+
+.project-creation-page {
+	display: flex;
+	justify-content: center;
+}
+
+.project-creation-page h3 {
+	color: #3d0d6f;
+	margin-top: 20px;
+}
+
+.btn-edit {
+	color: white;
+	background-color: #1f7a8c;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1700px) {
+	nav button {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+	.navigation {
+        order: 2; /* This will make the navigation appear after the logo in the flex layout */
+        margin-top: 10px; 
+	}
+	.profile-page {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

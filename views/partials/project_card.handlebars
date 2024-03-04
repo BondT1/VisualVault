@@ -1,0 +1,11 @@
+<div class='project'>
+	<a href='/project/{{id}}' data-id='{{id}}'>
+		<h3 class='project-name'>{{project_name}}</h3>
+		<p class="project-caption">{{caption}}</p>
+		<p class='date'>Updated: {{format_date updatedAt}}</p>
+	</a>
+		{{> reaction_buttons loggedInUser=loggedInUser}}
+		{{#unless avoidProfile}}
+			{{> project_user}}
+		{{/unless}}
+</div>
